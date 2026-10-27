@@ -1,0 +1,9 @@
+[
+  {
+    "name": "T821 from Semantan Pintu B",
+    "cat": "rapid-bus-mrtfeeder",
+    "route": "T821",
+    "stop": "Semantan Pintu B",
+    "radius": 60
+  }
+]
