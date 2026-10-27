@@ -1,0 +1,61 @@
+name: Bus tracker
+
+on:
+  schedule:
+    # GitHub uses UTC. Malaysia is UTC+8, so these start at about 06:03, 10:33, 15:03 and 19:33 MYT.
+    - cron: "3 22 * * *"
+    - cron: "33 2 * * *"
+    - cron: "3 7 * * *"
+    - cron: "33 11 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = test the setup, track = record departures"
+        type: choice
+        options: [check, track]
+        default: check
+      minutes:
+        description: "Minutes to record (only used when mode is track)"
+        default: "10"
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 320
+    concurrency:
+      group: tracker-${{ github.event.inputs.mode || 'track' }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install gtfs-realtime-bindings
+
+      - name: Run tracker
+        env:
+          MODE: ${{ github.event.inputs.mode || 'track' }}
+          MINUTES: ${{ github.event.inputs.minutes || '275' }}
+        run: |
+          if [ "$MODE" = "check" ]; then
+            python tracker.py --check
+          else
+            python tracker.py --minutes "$MINUTES"
+          fi
+
+      - name: Save results
+        if: always()
+        run: |
+          git config user.name "bus-tracker"
+          git config user.email "bus-tracker@users.noreply.github.com"
+          git add data timetable.md 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Update bus data"
+            git pull --rebase
+            git push
+          fi
