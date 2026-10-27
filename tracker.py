@@ -57,11 +57,14 @@ def resolve(w):
     """Turn a watches.json entry into a route id, trip ids and stop coordinates."""
     cat, want = w["cat"], w["route"].lower()
     routes = list(rows(cat, "routes.txt"))
-    hit = [r for r in routes if want in (r["route_id"].lower(), (r.get("route_short_name") or "").lower())]
+    # The route number (e.g. T821) may sit in route_short_name, route_long_name or route_id.
+    hit = [r for r in routes if want in ([r["route_id"].lower()] + norm(r.get("route_short_name") or "")
+                                         + norm(r.get("route_long_name") or ""))]
     if not hit:
-        sim = [(r.get("route_short_name") or r["route_id"]) for r in routes
-               if want in ((r.get("route_short_name") or "") + r["route_id"]).lower()][:15]
-        raise SystemExit("Route %r was not found in %s. Similar routes: %s" % (w["route"], cat, sim))
+        listing = ["%s | %s | %s" % (r["route_id"], r.get("route_short_name") or "", r.get("route_long_name") or "")
+                   for r in routes[:60]]
+        raise SystemExit("Route %r was not found in %s (%d routes there). First routes, as id | short name | long name:\n%s"
+                         % (w["route"], cat, len(routes), "\n".join(listing)))
     rid = hit[0]["route_id"]
     trips = {r["trip_id"] for r in rows(cat, "trips.txt") if r["route_id"] == rid}
     order, seen = [], set()
