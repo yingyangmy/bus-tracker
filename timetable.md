@@ -4,24 +4,24 @@ Built from live GPS data. Times are Malaysia time and can lag the real departure
 
 ## T821 from Semantan Pintu B
 
-### Weekday (2 days of data)
+### Weekday (3 days of data)
 
-Typical departures: 06:30 (1/2 days), 07:01 (1/2 days), 07:30 (1/2 days), 08:00 (1/2 days), 08:07 (1/2 days), 08:30 (1/2 days), 08:39 (1/2 days), 09:01 (1/2 days), 09:42 (1/2 days), 10:20 (1/2 days), 10:52 (1/2 days), 11:01 (1/2 days), 11:41 (1/2 days), 12:20 (1/2 days), 13:01 (1/2 days), 13:40 (1/2 days), 13:48 (1/2 days), 14:59 (1/2 days), 15:07 (1/2 days), 15:32 (1/2 days), 15:59 (1/2 days), 16:13 (1/2 days), 16:33 (2/2 days), 16:45 (1/2 days), 16:59 (1/2 days), 17:11 (1/2 days), 17:35 (1/2 days), 18:01 (1/2 days), 18:13 (1/2 days), 18:41 (1/2 days), 18:53 (1/2 days), 19:20 (1/2 days), 19:34 (1/2 days), 20:06 (2/2 days)
+Typical departures: 06:30 (2/3 days), 07:00 (2/3 days), 07:30 (2/3 days), 08:00 (2/3 days), 08:07 (2/3 days), 08:31 (2/3 days), 08:40 (2/3 days), 09:00 (2/3 days), 09:41 (2/3 days), 10:20 (2/3 days), 10:51 (2/3 days), 11:01 (2/3 days), 16:33 (2/3 days), 20:06 (2/3 days)
 
 | Hour | Buses per day | Typical gap |
 |---|---|---|
-| 06:00 | 0.5 | - |
-| 07:00 | 1.0 | 30 min |
-| 08:00 | 2.0 | 16 min |
-| 09:00 | 2.0 | 14 min |
-| 10:00 | 1.0 | 32 min |
-| 11:00 | 1.0 | 24 min |
-| 12:00 | 0.5 | 39 min |
-| 13:00 | 1.5 | 39 min |
-| 14:00 | 0.5 | 71 min |
-| 15:00 | 1.5 | 25 min |
-| 16:00 | 3.0 | 14 min |
-| 17:00 | 1.0 | 18 min |
-| 18:00 | 2.0 | 19 min |
-| 19:00 | 1.0 | 20 min |
-| 20:00 | 1.5 | 18 min |
+| 06:00 | 0.7 | - |
+| 07:00 | 1.7 | 29 min |
+| 08:00 | 2.7 | 16 min |
+| 09:00 | 2.3 | 19 min |
+| 10:00 | 1.7 | 32 min |
+| 11:00 | 1.0 | 10 min |
+| 12:00 | 0.3 | 39 min |
+| 13:00 | 1.0 | 39 min |
+| 14:00 | 0.3 | 71 min |
+| 15:00 | 1.0 | 25 min |
+| 16:00 | 2.0 | 14 min |
+| 17:00 | 0.7 | 18 min |
+| 18:00 | 1.3 | 19 min |
+| 19:00 | 0.7 | 20 min |
+| 20:00 | 1.0 | 18 min |
