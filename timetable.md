@@ -6,7 +6,7 @@ Built from live GPS data. Times are Malaysia time and can lag the real departure
 
 ### Weekday (23 days of data)
 
-Typical departures: 07:01 (22/23 days), 07:31 (21/23 days), 08:00 (21/23 days), 08:09 (16/23 days), 08:31 (21/23 days), 09:01 (21/23 days), 09:40 (21/23 days), 09:48 (10/23 days), 10:20 (22/23 days), 11:01 (17/23 days), 11:40 (18/23 days), 12:21 (15/23 days), 13:00 (18/23 days), 13:40 (19/23 days), 14:20 (16/23 days), 14:31 (11/23 days), 15:00 (18/23 days), 15:31 (17/23 days), 16:31 (18/23 days), 17:01 (16/23 days), 17:31 (17/23 days), 17:46 (14/23 days), 18:01 (16/23 days), 18:13 (11/23 days), 18:41 (17/23 days), 18:54 (12/23 days), 19:20 (17/23 days), 19:32 (14/23 days), 20:00 (19/23 days)
+Typical departures: 07:01 (22/23 days), 07:31 (21/23 days), 08:00 (21/23 days), 08:09 (16/23 days), 08:31 (21/23 days), 09:01 (21/23 days), 09:40 (21/23 days), 09:48 (10/23 days), 10:20 (22/23 days), 11:01 (17/23 days), 11:40 (18/23 days), 12:21 (15/23 days), 13:00 (18/23 days), 13:40 (19/23 days), 14:20 (16/23 days), 14:31 (11/23 days), 15:00 (18/23 days), 15:31 (17/23 days), 16:31 (18/23 days), 17:01 (16/23 days), 17:31 (17/23 days), 17:46 (14/23 days), 18:01 (16/23 days), 18:13 (11/23 days), 18:41 (17/23 days), 18:54 (12/23 days), 19:20 (18/23 days), 19:32 (15/23 days), 20:00 (20/23 days)
 
 | Hour | Buses per day | Typical gap |
 |---|---|---|
